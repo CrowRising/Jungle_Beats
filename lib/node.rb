@@ -6,4 +6,8 @@ class Node
   def data
     @name
   end
+
+  def next_node
+    nil 
+  end
 end
