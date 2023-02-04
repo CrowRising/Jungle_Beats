@@ -28,7 +28,7 @@ RSpec.describe LinkedList do
       list.append("doop")
       # require 'pry'; binding.pry
 
-      expect(list.head.data).to eq("doop")
+      expect(list.head.data).to eq("doop")#important to note not expecting .append, expecting that the command of append is reaching into the list into the node(head) and grabbing the data
       
     end
   end
@@ -61,7 +61,7 @@ RSpec.describe LinkedList do
       list.append("doop")
       # list.to_string
 # require 'pry'; binding.pry
-      expect(list.head.data).to eq("doop")
+      expect(list.head.data).to eq("doop") #this is such an important step to reach thru at it were into the list into the node and grab the data
     end
 
   end
