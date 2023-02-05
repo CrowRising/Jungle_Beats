@@ -52,6 +52,24 @@ RSpec.describe LinkedList do
     end
   end
 
+  describe "next append" do
+    it "adds data to next node" do
+      list = LinkedList.new
+      list.append("plop")
+
+      expect(list.head.data).to eq("plop")
+    end
+  end
+
+  describe "next append" do
+    it "adds data to next node" do
+      list = LinkedList.new
+      list.append("suu")
+
+      expect(list.head.data).to eq("suu")
+    end
+  end
+
   describe "#next_node" do
     it "checks the value of the next node" do
 
@@ -85,5 +103,18 @@ RSpec.describe LinkedList do
     end
 
   end
+
+  describe "#prepend" do
+    it "adds node to beginning of list" do
+      list = LinkedList.new
+      list.append("plop")
+      list.append("suu")
+      list.prepend("dop")
+
+      expect(list.head.data).to eq("dop")
+    end
+  end
+
+ 
 
 end
