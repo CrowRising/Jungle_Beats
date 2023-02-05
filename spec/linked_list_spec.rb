@@ -115,6 +115,28 @@ RSpec.describe LinkedList do
     end
   end
 
+  it "counts new list" do
+      list = LinkedList.new
+      list.append("plop")
+      list.append("suu")
+      list.prepend("dop")
+      list.count
+# require 'pry'; binding.pry
+      expect(list.count).to eq(3)
+  end 
+
+  describe "#insert" do
+    it "inserts node into list by an index" do
+      list = LinkedList.new
+      list.append("plop")
+      list.append("suu")
+      list.prepend("dop")
+      list.insert(1, "woo")
+
+      expect(list.head.next_node.data).to eq("woo")
+    end
+  end
+
  
 
 end

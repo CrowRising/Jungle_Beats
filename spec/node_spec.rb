@@ -1,4 +1,4 @@
-require './lib/node'
+require '../lib/node'
 
 RSpec.describe Node do
   describe "#instance" do
@@ -24,7 +24,7 @@ RSpec.describe Node do
       
       node = Node.new("plop")
 
-      expect(node.next_node).to eq(nil)
+      expect(node.next_node).to be(nil)
     end
   end
 end
