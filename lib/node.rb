@@ -1,13 +1,10 @@
 class Node
-  def initialize(name)
-    @name = name
+  attr_accessor :data, :next_node
+  
+  def initialize(data)
+    @data = data
+    @next_node = nil
+  
   end
 
-  def data
-    @name
-  end
-
-  def next_node
-    nil 
-  end
 end
