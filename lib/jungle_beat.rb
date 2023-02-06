@@ -4,4 +4,8 @@ class JungleBeat
     @list = LinkedList.new
     
   end
+
+  def list
+    @list
+  end
 end
