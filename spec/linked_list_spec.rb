@@ -86,7 +86,7 @@ RSpec.describe LinkedList do
       list.append("doop")
       list.append("deep")
       list.count
-# require 'pry'; binding.pry
+      
       expect(list.count).to eq(2)
     end
     
@@ -134,9 +134,58 @@ RSpec.describe LinkedList do
       list.insert(1, "woo")
 
       expect(list.head.next_node.data).to eq("woo")
+      expect(list.to_string).to eq("dop woo plop suu")
     end
   end
 
- 
+  it " calls the string" do
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+      expect(list.to_string).to eq("deep woo shi shu blop")
+  end
+
+   describe "#additional methods" do
+    it "finds index point and returns a specific number of elements" do
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+      # list.find(2, 1)
+
+      expect(list.find(2, 1)).to eq("shi")
+
+    end
+  end
+
+  it "checks to see if specific data is included" do
+    list = LinkedList.new
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+
+    expect(list.includes?("deep")).to be(true)
+    expect(list.includes?("shi")).to be(true)
+    expect(list.includes?("dep")).to be(false)
+  end
+
+ it "removes last element from list" do
+  list = LinkedList.new
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+
+    expect(list.pop).to eq("blop")
+ end
 
 end
