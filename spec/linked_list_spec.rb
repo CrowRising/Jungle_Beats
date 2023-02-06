@@ -86,7 +86,7 @@ RSpec.describe LinkedList do
       list.append("doop")
       list.append("deep")
       list.count
-      
+
       expect(list.count).to eq(2)
     end
     
@@ -183,9 +183,9 @@ RSpec.describe LinkedList do
     list.append("woo")
     list.append("shi")
     list.append("shu")
-    list.append("blop")
+    # list.append("blop")
 
-    expect(list.pop).to eq("blop")
+    expect(list.pop).to eq("shu")
  end
 
 end
