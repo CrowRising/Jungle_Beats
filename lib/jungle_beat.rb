@@ -3,6 +3,7 @@ class JungleBeat
   def initialize
     @list = LinkedList.new
     
+    
   end
 
   def list
@@ -20,4 +21,13 @@ class JungleBeat
     string.join(" ")
 
   end
+
+  def count
+    list.count
+  end
+
+  def play
+    `say -r 130 -v Boing #{list.to_string}`
+  end
+
 end
