@@ -9,13 +9,12 @@ class LinkedList
     if @head.nil?
       @head = Node.new(data)
     else 
-    # require 'pry'; binding.pry
       current_node = @head
      
       while(!current_node.next_node.nil?)
         current_node = current_node.next_node
     end
-    #   #We are at the end of the list
+    
       current_node.next_node = Node.new(data)
     end
   end
@@ -91,10 +90,25 @@ class LinkedList
 
   def includes?(data)
     current_node = @head
-    until current_node.data == data || current.next_node == nil
+    
+    until current_node.data == data || current_node.next_node == nil
       current_node = current_node.next_node
+      if current_node.data != data
+        false
+      end
     end
     current_node.data == (data)
+  end
+
+  def pop
+    current_node = @head
+    until current_node.next_node.next_node.nil?
+      current_node = current_node.next_node
+    end
+    last_node = current_node.next_node
+    current_node.next_node.nil?
+    last_node.data
+
   end
   
 end
